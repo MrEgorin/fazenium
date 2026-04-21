@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+.venv
+env/
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# IDEs
+.vscode/
+.idea/
+
+# Data & Models
+models/
+data/*.png
+data/*.jpg
+data/threats.json # Optional: keep if it's part of the repo
+!data/fragments.json
+
+# OS
+.DS_Store
+Thumbs.db

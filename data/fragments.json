@@ -1,0 +1,20 @@
+[
+    {"name": "Benzene Ring", "smiles": "c1ccccc1", "category": "Aromatic", "desc": "Basic aromatic ring"},
+    {"name": "Pyridine", "smiles": "c1ccncc1", "category": "Aromatic", "desc": "Nitrogen-containing aromatic"},
+    {"name": "Imidazole", "smiles": "c1cnc[nH]1", "category": "Aromatic", "desc": "Five-membered heterocycle"},
+    {"name": "Indole", "smiles": "c1ccc2[nH]ccc2c1", "category": "Aromatic", "desc": "Bicyclic aromatic"},
+    {"name": "Piperidine", "smiles": "C1CCNCC1", "category": "Aliphatic", "desc": "Six-membered ring with N"},
+    {"name": "Morpholine", "smiles": "C1COCCN1", "category": "Aliphatic", "desc": "Ring with N and O"},
+    {"name": "Piperazine", "smiles": "C1CNCCN1", "category": "Aliphatic", "desc": "Two nitrogen ring"},
+    {"name": "Cyclohexane", "smiles": "C1CCCCC1", "category": "Aliphatic", "desc": "Saturated six-membered ring"},
+    {"name": "Ethanol", "smiles": "CCO", "category": "Functional", "desc": "Simple alcohol"},
+    {"name": "Acetic Acid", "smiles": "CC(=O)O", "category": "Functional", "desc": "Carboxylic acid"},
+    {"name": "Aniline", "smiles": "c1ccc(N)cc1", "category": "Functional", "desc": "Aminobenzene"},
+    {"name": "Phenol", "smiles": "Oc1ccccc1", "category": "Functional", "desc": "Hydroxybenzene"},
+    {"name": "Acetamide", "smiles": "CC(=O)N", "category": "Functional", "desc": "Amide group"},
+    {"name": "Sulfonamide", "smiles": "NS(=O)(=O)c1ccccc1", "category": "Functional", "desc": "Antibacterial motif"},
+    {"name": "Aspirin (ref)", "smiles": "CC(=O)Oc1ccccc1C(=O)O", "category": "Drug", "desc": "Classic NSAID"},
+    {"name": "Caffeine (ref)", "smiles": "Cn1c(=O)c2c(ncn2C)n(C)c1=O", "category": "Drug", "desc": "Adenosine antagonist"},
+    {"name": "Ibuprofen (ref)", "smiles": "CC(C)Cc1ccc(cc1)C(C)C(=O)O", "category": "Drug", "desc": "Common analgesic"},
+    {"name": "Paracetamol (ref)", "smiles": "CC(=O)Nc1ccc(O)cc1", "category": "Drug", "desc": "Acetaminophen"}
+]

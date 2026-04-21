@@ -1,0 +1,50 @@
+[
+    {
+        "id": "zika",
+        "name": {"en": "Zika Virus RNA", "ua": "РНК Вірусу Зіка", "de": "Zika-Virus-RNA"},
+        "organism": "Zika virus",
+        "type": "RNA",
+        "description": {"en": "Fragment of Zika virus RNA genome", "ua": "Фрагмент РНК геному вірусу Зіка", "de": "Fragment des Zika-Virus-RNA-Genoms"},
+        "sequence": "AGTTGTTGATCTGTGTGAATCAGACTGCGATCTCACAACAGCCTTAACTCAGGCTTATGGCACTGTCTTAATGACATATGGAAAGACAAAAAGATCCATCTTGATTTTAATTTGTGTACCAGAATACTTTTCAAAGCAACTTATCTG"
+    },
+    {
+        "id": "sars_cov2",
+        "name": {"en": "SARS-CoV-2 Spike", "ua": "Спайк SARS-CoV-2", "de": "SARS-CoV-2 Spike"},
+        "organism": "SARS-CoV-2",
+        "type": "RNA",
+        "description": {"en": "Fragment of Spike protein mRNA", "ua": "Фрагмент мРНК білка Spike", "de": "Fragment der Spike-Protein-mRNA"},
+        "sequence": "AUGUUUGUUUUUCUUGGUUUAUUACCACUGAAAGAUAAACAGUGCGUUAGAAAGUGCUGUUGGUUUUUUGUCCUUUUUUGAUACCUGCGCAACUAACAACACUGCUAUGCUAAUGCGUUUAAUAGGCACUGGUAAUCUUCAGCUAUUUUUCC"
+    },
+    {
+        "id": "hiv",
+        "name": {"en": "HIV-1 Protease", "ua": "Протеаза ВІЛ-1", "de": "HIV-1-Protease"},
+        "organism": "HIV-1",
+        "type": "DNA",
+        "description": {"en": "HIV-1 protease gene sequence", "ua": "Послідовність гену протеази ВІЛ-1", "de": "HIV-1 Protease-Gensequenz"},
+        "sequence": "CCTCAAATCACTCTTTGGCAACGACCCCTCGTCACAATAAAGATAGGGGGGCAACTAAAGGAAGCTCTATTAGATACAGGAGCAGATGATACAGTATTAGAAGAAATGAGTTTGCCAGGAAGATGGAAACCAAAAATGATAGGGGGAATTGGAGGTTT"
+    },
+    {
+        "id": "influenza",
+        "name": {"en": "Influenza A HA", "ua": "Грип A HA", "de": "Influenza A HA"},
+        "organism": "Influenza A",
+        "type": "RNA",
+        "description": {"en": "Hemagglutinin gene fragment", "ua": "Фрагмент гену гемаглютиніну", "de": "Hämagglutinin-Genfragment"},
+        "sequence": "AUGAAAGCAAAACUACUGGUCUUGUUAACCAUCAUGGCAGUGAUUGCUGGUGAUUAUUCAAAAUUUCAUCUGGUUAUUACAAUUGAUAGAGCGAUAGCAUCACAGAUAGAUAGUAAUACCGCAGCAAAUAAUAAUUCAAACACCCCUAAAAUAGCC"
+    },
+    {
+        "id": "ebola",
+        "name": {"en": "Ebola VP35", "ua": "Ебола VP35", "de": "Ebola VP35"},
+        "organism": "Ebola virus",
+        "type": "RNA",
+        "description": {"en": "VP35 protein coding sequence fragment", "ua": "Фрагмент кодуючої послідовності білка VP35", "de": "VP35-Protein-kodierende Sequenz"},
+        "sequence": "AUGACAAAUCAAGUCCGCAAACUUAUAACAGAUCACCCCGAAGCAGUGCUUAAUACAAAUGACUCUGAUCAAAUUGCAAAUUAUUUUAAAGAAGCAGCAAGAAUUGAGCUUGAUCCAUUUAGUCUGCUUAAGAAACUUACUGGAAAUCAAGAACCA"
+    },
+    {
+        "id": "custom_protein",
+        "name": {"en": "Sample Protein", "ua": "Зразковий Білок", "de": "Beispiel-Protein"},
+        "organism": "Synthetic",
+        "type": "Protein",
+        "description": {"en": "A small example protein sequence", "ua": "Невелика зразкова амінокислотна послідовність", "de": "Eine kleine Beispiel-Proteinsequenz"},
+        "sequence": "MVLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSH"
+    }
+]
