@@ -12,8 +12,8 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 OLLAMA_HOST = "http://localhost:11434"
 OLLAMA_MODEL = "gemma4:e2b"
 
-# Priority: Environment Variable (Streamlit Secrets) > Hardcoded Value
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyCx4ZtuDUCJns2D9m3lIZngJQJ9NNvGWZY")
+# MUST set this in Streamlit Secrets or as an Environment Variable
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 GEMINI_MODEL = "gemma-4-26b-a4b-it"
 HF_API_MODEL = "google/gemma-2-2b-it" # Fallback or reference
 
