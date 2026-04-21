@@ -27,13 +27,21 @@ class GemmaEngine:
         if self._available:
             return True
 
-        if not GEMINI_API_KEY or GEMINI_API_KEY == "YOUR_GEMINI_KEY":
-            st.error("🔑 Missing GEMINI_API_KEY in config.py!")
+        # Use Streamlit Secrets directly if available
+        api_key = GEMINI_API_KEY
+        if not api_key:
+            try:
+                api_key = st.secrets["GEMINI_API_KEY"]
+            except Exception:
+                pass
+
+        if not api_key or api_key == "YOUR_GEMINI_KEY":
+            st.error("🔑 Missing GEMINI_API_KEY! Please add it to Streamlit Secrets.")
             return False
 
         try:
             from google import genai
-            self._client = genai.Client(api_key=GEMINI_API_KEY)
+            self._client = genai.Client(api_key=api_key)
             self._available = True
             return True
         except ImportError:
