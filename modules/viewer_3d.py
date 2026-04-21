@@ -105,9 +105,7 @@ def render_3d_viewer(pdb_text: str, style: str = "cartoon", color: str = "spectr
     </body>
     </html>
     """
-    import base64
-    b64 = base64.b64encode(html_content.encode()).decode()
-    st.iframe(src=f"data:text/html;base64,{b64}", height=height + 10)
+    components.html(html_content, height=height + 10, scrolling=False)
 
 
 def render_pocket_viewer(pdb_text: str, pockets: list,
@@ -172,9 +170,7 @@ def render_pocket_viewer(pdb_text: str, pockets: list,
     </body>
     </html>
     """
-    import base64
-    b64 = base64.b64encode(html_content.encode()).decode()
-    st.iframe(src=f"data:text/html;base64,{b64}", height=height + 10)
+    components.html(html_content, height=height + 10, scrolling=False)
 
 
 def render_md_trajectory(pdb_multi_model: str, width: int = 700, height: int = 450):
@@ -216,9 +212,7 @@ def render_md_trajectory(pdb_multi_model: str, width: int = 700, height: int = 4
     </body>
     </html>
     """
-    import base64
-    b64 = base64.b64encode(html_content.encode()).decode()
-    st.iframe(src=f"data:text/html;base64,{b64}", height=height + 10)
+    components.html(html_content, height=height + 10, scrolling=False)
 
 
 def render_docking_result(receptor_pdb: str, ligand_molblock: str, width: int = 700, height: int = 500):
@@ -263,6 +257,4 @@ def render_docking_result(receptor_pdb: str, ligand_molblock: str, width: int = 
     </body>
     </html>
     """
-    import base64
-    b64 = base64.b64encode(html_content.encode()).decode()
-    st.iframe(src=f"data:text/html;base64,{b64}", height=height + 10)
+    components.html(html_content, height=height + 10, scrolling=False)
