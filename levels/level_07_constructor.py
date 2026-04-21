@@ -76,7 +76,7 @@ def _render_constructor():
     )
 
     if not HAS_RDKIT:
-        st.error("RDKit not installed. Install with: pip install rdkit-pypi")
+        st.error("RDKit not installed. Install with: pip install rdkit")
         return
 
     tab_build, tab_fragments = st.tabs(["🧪 Free Build", f"🧩 {t('l7_fragments')}"])
