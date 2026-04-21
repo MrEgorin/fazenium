@@ -382,38 +382,20 @@ def _render_level_ai_guide(level_num: int):
                 st.markdown(f"*{t('gemma_thinking')}*")
                 full_briefing = ""
                 for chunk in engine.stream_chat(
-                    f"Generate a short mission briefing for Level {level_num}: {title}. 2-3 sentences.",
+                    f"Generate a dramatic 2-sentence scientist mission briefing for: {title}. Focus on the goal.",
                     difficulty=diff, language=lang
                 ):
                     full_briefing += chunk
                     guide_placeholder.markdown(
-                        f"<div style='font-size:0.95rem; line-height:1.6; color: var(--fz-text);'>{full_briefing}</div>",
+                        f"<div class='fazena-card' style='padding: 1.25rem; font-style: italic; border-left: 4px solid var(--fz-accent);'>{full_briefing}</div>",
                         unsafe_allow_html=True
                     )
                 st.session_state[cache_key] = full_briefing
         else:
             guide_placeholder.markdown(
-                f"<div style='font-size:0.95rem; line-height:1.6; color: var(--fz-text);'>{st.session_state[cache_key]}</div>",
+                f"<div class='fazena-card' style='padding: 1.25rem; font-style: italic; border-left: 4px solid var(--fz-accent);'>{st.session_state[cache_key]}</div>",
                 unsafe_allow_html=True
             )
-        
-        st.markdown("<br>", unsafe_allow_html=True)
-        
-        q_key = f"guide_q_{level_num}"
-        question = st.text_input(t("gemma_placeholder"), key=q_key, label_visibility="collapsed", placeholder=t("gemma_placeholder"))
-        
-        if st.button(t("gemma_send"), key=f"guide_ask_{level_num}"):
-            if question:
-                ans_placeholder = st.empty()
-                full_ans = ""
-                for chunk in engine.stream_chat(
-                    question,
-                    difficulty=diff,
-                    language=lang,
-                    context=f"Discussion of Level: {title}"
-                ):
-                    full_ans += chunk
-                    ans_placeholder.markdown(f"<div class='gemma-msg ai'>{full_ans}</div>", unsafe_allow_html=True)
 
 
 # ═══════════════════════════════════════════════════════
@@ -422,6 +404,9 @@ def _render_level_ai_guide(level_num: int):
 def _render_level(level_num: int):
     """Route to the appropriate level module."""
     try:
+        # Render AI briefing at the top for context
+        _render_level_ai_guide(level_num)
+
         if level_num == 1:
             from levels.level_01_life_code import render_level
             render_level()
@@ -443,9 +428,6 @@ def _render_level(level_num: int):
         elif level_num == 10:
             from levels.level_10_open_world import render_level
             render_level()
-
-        # Render AI guide AFTER level content for better performance perception
-        _render_level_ai_guide(level_num)
 
         # Gemma console at the bottom of every level
         render_section_divider()
