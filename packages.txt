@@ -1,5 +1,5 @@
-libXrender1
-libXext6
+libxrender1
+libxext6
 libfontconfig1
-libxrender-dev
+librender-dev
 libxext-dev
