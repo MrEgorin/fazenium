@@ -292,7 +292,7 @@ def render_level():
         if notes:
             import pandas as pd
             df = pd.DataFrame(notes)
-            st.dataframe(df, use_container_width=True, hide_index=True)
+            st.dataframe(df, width="stretch", hide_index=True)
 
         if st.button(t("l10_export"), key="l10_export_btn", type="primary"):
             report_lines = [

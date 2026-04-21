@@ -90,7 +90,7 @@ def _render_explore():
             pdb_id = st.text_input(t("l3_pdb_id"), value="1BNA", placeholder="e.g. 1BNA, 6LU7, 7V7A", key="l3_pdb_id_input")
         with c2:
             st.markdown("<br>", unsafe_allow_html=True)
-            fetch = st.button(t("l3_fetch"), key="l3_fetch_btn", use_container_width=True)
+            fetch = st.button(t("l3_fetch"), key="l3_fetch_btn", width="stretch")
         if fetch:
             with st.spinner("Fetching..."):
                 data = _fetch_pdb(pdb_id)

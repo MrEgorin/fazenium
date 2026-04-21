@@ -205,7 +205,7 @@ def _render_sidebar():
         )
 
         # Dashboard button
-        if st.button(f"🏠 {t('dashboard')}", key="nav_dash", use_container_width=True):
+        if st.button(f"🏠 {t('dashboard')}", key="nav_dash", width="stretch"):
             st.session_state["current_page"] = "dashboard"
             st.rerun()
 
@@ -213,7 +213,7 @@ def _render_sidebar():
         for num, info in LEVELS.items():
             title = t(info["title_key"])
             btn_label = f"{info['icon']} L{num}: {title}"
-            if st.button(btn_label, key=f"nav_l{num}", use_container_width=True):
+            if st.button(btn_label, key=f"nav_l{num}", width="stretch"):
                 st.session_state["current_page"] = f"level_{num}"
                 st.rerun()
 
@@ -294,7 +294,7 @@ def _render_dashboard():
                     render_level_card(info["icon"], f"L{num}: {title}", desc, info["fp_reward"])
 
                     if st.button(f"Enter L{num}", key=f"dash_enter_{num}",
-                                  use_container_width=True):
+                                  width="stretch"):
                         st.session_state["current_page"] = f"level_{num}"
                         st.rerun()
 

@@ -60,7 +60,7 @@ def _render_mol_image(mol, width=400, height=300):
     img = Draw.MolToImage(mol, size=(width, height))
     buf = io.BytesIO()
     img.save(buf, format="PNG")
-    st.image(buf.getvalue(), use_container_width=True)
+    st.image(buf.getvalue(), width="stretch")
 
 
 # ═══════════════════════════════════════════════════════
@@ -272,7 +272,7 @@ def _render_advanced():
             row["Lipinski"] = "✅" if r["lipinski"] else "❌"
             df_data.append(row)
         df = pd.DataFrame(df_data)
-        st.dataframe(df, use_container_width=True, hide_index=True)
+        st.dataframe(df, width="stretch", hide_index=True)
 
         if "l8_compared" not in st.session_state:
             st.session_state["l8_compared"] = True
