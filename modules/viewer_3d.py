@@ -105,7 +105,7 @@ def render_3d_viewer(pdb_text: str, style: str = "cartoon", color: str = "spectr
     </body>
     </html>
     """
-    components.html(html_content, height=height + 10, scrolling=False)
+    st.html(html_content)
 
 
 def render_pocket_viewer(pdb_text: str, pockets: list,
@@ -170,7 +170,7 @@ def render_pocket_viewer(pdb_text: str, pockets: list,
     </body>
     </html>
     """
-    components.html(html_content, height=height + 10, scrolling=False)
+    st.html(html_content)
 
 
 def render_md_trajectory(pdb_multi_model: str, width: int = 700, height: int = 450):
@@ -212,7 +212,7 @@ def render_md_trajectory(pdb_multi_model: str, width: int = 700, height: int = 4
     </body>
     </html>
     """
-    components.html(html_content, height=height + 10, scrolling=False)
+    st.html(html_content)
 
 
 def render_docking_result(receptor_pdb: str, ligand_molblock: str, width: int = 700, height: int = 500):
@@ -257,4 +257,4 @@ def render_docking_result(receptor_pdb: str, ligand_molblock: str, width: int = 
     </body>
     </html>
     """
-    components.html(html_content, height=height + 10, scrolling=False)
+    st.html(html_content)
